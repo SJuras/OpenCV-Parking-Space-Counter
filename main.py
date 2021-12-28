@@ -38,10 +38,10 @@ def checkParkingSpace(imgPro):
             color = (0,0,255)
             thickness = 2
 
-        cv2.rectangle(img, pos, (pos[0]+width, pos[1]+height), color, thickness)
 
     # put count of pixels of each place in rectangles
-    cvzone.putTextRect(img, f'Free: {spaceCounter}/{len(posList)}' ,(100, 50), scale=3, thickness=5, offset=20, colorR=(0,200,0))
+    cv2.rectangle(img, pos, (pos[0]+width, pos[1]+height), color, thickness)
+    cvzone.putTextRect(img, f'Free: {spaceCounter}/{len(posList)}' ,(100, 50), scale=3, thickness=5, offset=20, colorR=color)
 
 while True:
 
